@@ -1,0 +1,196 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+
+body {
+	width: 100%;
+	min-height: 100%;
+	overflow-x: hidden;
+	background: url("../img/background.jpg") no-repeat center center fixed;
+	background-size: cover;
+	margin: 0;
+	position: relative;
+}
+h1 {
+	font-size: 3rem;
+	color: #fff;
+	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+	text-shadow: 4px 4px 3px #b9b9b9;
+	margin-top: 0;
+	padding-top: 20px;
+}
+h3 {
+	color: #ededed;
+	text-align: center;
+	font-size: 2rem;
+	font-family: 'Wallpoet', cursive;
+}
+#gameEnded {
+	color: #ff6c6c;
+	font-size: 4.5rem;
+	font-family: 'Wallpoet', cursive;
+	transition: 2s;
+	position: fixed;
+	left: 40%;
+	width: 20%;
+	text-shadow: 0px 0px 15px #000;
+    z-index: 999;
+}
+#content {
+	width: 94%;
+	margin: auto;
+	transition: 1s;
+}
+#elements {
+	text-align: center;
+	margin: 0 auto 100px auto;
+	width: 59%;
+	display: inline-block;
+	vertical-align: top;
+}
+.row {
+	width: 100%;
+}
+.element {
+	color: #fff;
+	display: inline-block;
+	width: 10%;
+	min-width: 50px;
+	margin: 1px 3px;
+}
+.element img {
+	width: 100%;
+	display: block;
+}
+#score {
+	color: #fff;
+	font-family: 'Wallpoet', cursive;
+	background-color: rgba(40, 40, 40, 0.4);
+	width: 10%;
+	min-width: 110px;
+	padding: 4%;
+	text-align: center;
+	display: inline-block;
+	transition:1s;
+}
+#score *,#score1 * {
+	display: block;
+	margin: 0 auto;
+}
+#score1 {
+	color: #fff;
+	font-family: 'Wallpoet', cursive;
+	background-color: rgba(40, 40, 40, 0.4);
+	padding: 4%;
+	display: inline-block;
+	float: right;
+	width: 10%;
+	min-width: 110px;
+	text-align: center;
+	transition:1s;
+}
+#score1 > h5 {
+	display: block;
+	margin: 0;
+}
+#scoreCount {
+	display: block;
+	margin: 0;
+	padding-bottom: 2rem;
+}
+#movesLeft {
+	display: block;
+	margin: 0;
+	padding-bottom: 2rem;
+}
+#level {
+	font-family: 'Wallpoet', cursive;
+	text-align: center;
+	margin-bottom: 2rem;
+	transition:1s;
+}
+#start{
+	font-family: 'Press Start 2P', cursive;
+	color: #eee;
+	background: #727477; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(#36393e, #86888b, #aeafb1); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#36393e, #86888b, #aeafb1); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#36393e, #86888b, #aeafb1); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#36393e, #86888b, #aeafb1); /* Standard syntax */
+	margin: 2rem auto 0 auto;
+	padding: 8px 5px 3px 5px;
+	transition:1s;
+}
+#footer {
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 0.8rem;
+	color: #939393;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 15px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+#footer > a {
+	text-decoration: none;
+	color: #bebebe;
+}
+
+
+#line {
+	height: 30px;
+	background-color: rgba(40, 40, 40, 0.6);
+	display: none;	
+}
+#score_button {
+	width: 20px;
+	padding: 5px;
+	cursor: pointer;
+}
+#score_button:hover {
+	background-color: black;
+}
+
+@media only screen and (min-width: 1200px) {
+	#score {font-size: 1.5rem;}
+	#score1 {font-size: 1.5rem;}
+	#level {font-size: 1rem;}
+	#start {font-size: 1.5rem;}
+}
+@media only screen and (max-width: 1199px) {
+	#level {font-size: 0.7rem;}
+	
+}
+@media only screen and (max-width: 970px) {
+	#score {padding: 2%;}
+	#score1 {padding: 2%;}
+}
+
+
+@media only screen and (min-width: 455px) and (max-width: 740px){
+	#content {position: relative;}
+	#score {position: absolute; top:0px; width: 130px; padding: 10px 0;}
+	#score1 {position: absolute; top:176px; width: 130px; padding: 10px 0;}
+	#elements {width: calc(100% - 130px); margin-left: 130px;}
+}
+
+	
+@media only screen and (max-width: 454px){
+	#line {display: block;}
+	#content {width: 100%;}
+	#score {position: absolute; width: 100%; padding: 10px 0; }
+	#score1 {position: absolute; width: 100%; padding: 10px 0;}
+	#score.visible {top:30px; transition: 1s;}
+	#score1.visible {top:206px; transition: 1s;}
+	#score:not(.visible) {top:-178px;transition: 1s;}
+	#score1:not(.visible) {top:-384px;transition: 1s;}	
+	#elements {width: 100%}
+	#gameEnded {font-size: 3.5rem; left: 25%;}
+}

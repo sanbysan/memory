@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Wallpoet" rel="stylesheet"> 
+</head>
+<body>
+	<div id="line"><img id="score_button" src="img/score_icon.png" alt="score"></div>
+	<h1>Memory game</h1>
+	<h3>Hello <span id="name"> YOU </span></h3>
+	<div id="gameEnded"></div>
+	<div id="content">
+		<div id="score">
+			<span>Level:</span>
+			<select id="level">
+				<option value='1'>Easy</option>
+				<option value='2'>Medium</option>
+				<option value='3'>Advanced</option>
+			</select>
+			<span>Players:</span>
+			<select id="players">
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+			</select>
+			<button id="start">START</button> 
+		</div>
+		<div id="score1">
+			<div id="playersScoreContainer"></div>
+			<h5>Moves left:</h5>
+			<p id="movesLeft">   </p> 
+		</div>
+		<div id="elements">
+			
+		</div>
+	</div>
+	<div id="footer">Designed by <a href="mailto:sandra.morawska@gmail.com?subject=Memory Game">Sandra Morawska</a>.</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
